@@ -42,7 +42,35 @@ int main()
     }
   }
 
-   
+  int attempts = 0;
  
+  while(1)
+  {
+    try
+    {
+    cout << "enter number sectot from 1 to 9: ";
+    int sectornumber;
+    cin >> sectornumber;
+
+    if(sectornumber < 1 || sectornumber > 9)
+    {
+      throw invalid_argument("Invalid sector number");
+    }
+    }
+
+    catch(const invalid_argument& e)
+    {
+      std::cerr << e.what() << '\n';
+      continue;
+    }
+    
+   
+
+
+  }
+   
+   
     return 0; 
 }
+
+
